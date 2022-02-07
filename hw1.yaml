@@ -17,5 +17,3 @@
       dest: /root/meme
   - name: Start server
     command: node meme/server/server.js
-
-    194.113.74.177
