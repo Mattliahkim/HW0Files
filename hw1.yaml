@@ -4,23 +4,21 @@
 
   tasks:
   - name: Ensure python2 is at the latest version
-    ansible.builtin.yum:
+    ansible.builtin.apt:
       name: python
       state: latest
   - name: Ensure python3 is at the latest version
-    ansible.builtin.yum:
+    ansible.builtin.apt:
       name: python3
       state: latest
   - name: Ensure nodeJS is at the latest version
-    ansible.builtin.yum:
+    ansible.builtin.apt:
       name: nodejs
       state: latest
-      use_backend: dnf
   - name: Ensure express is at the latest version
-    ansible.builtin.yum:
+    ansible.builtin.apt:
       name: node-express-generator
       state: latest
-      use_backend: dnf
   - name: Checkout git repository
     ansible.builtin.git:
       repo: 'https://github.com/Mattliahkim/HW0Files.git'
