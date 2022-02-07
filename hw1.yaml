@@ -1,0 +1,21 @@
+---
+- name: HW1
+  hosts: hw1
+
+  tasks:
+  - name: Ensure nodeJS is at the latest version
+    ansible.builtin.yum:
+      name: nodejs
+      state: latest
+  - name: Ensure express is at the latest version
+    ansible.builtin.yum:
+      name: node-express-generator
+      state: latest
+  - name: Checkout git repository
+    ansible.builtin.git:
+      repo: 'https://github.com/Mattliahkim/HW0Files.git'
+      dest: /root/meme
+  - name: Start server
+    command: node meme/server/server.js
+
+    194.113.74.177
