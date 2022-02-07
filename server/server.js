@@ -9,9 +9,9 @@ app.listen(PORT, () => {
 });
 
 app.get("/hw0", (req, res) => {
-    res.sendFile("/root/hw0.html");
+    res.sendFile("/root/meme/hw0.html");
   });
   
   app.get("/pancake.png", (req, res) => {
-    res.sendFile("/root/pancake.png");
+    res.sendFile("/root/meme/pancake.png");
   });
