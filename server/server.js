@@ -15,3 +15,7 @@ app.get("/hw0", (req, res) => {
   app.get("/pancake.png", (req, res) => {
     res.sendFile("/root/meme/pancake.png");
   });
+
+  app.get("/hw1.yml", (req, res) => {
+    res.sendFile("/root/meme/hw1.yaml");
+  });
