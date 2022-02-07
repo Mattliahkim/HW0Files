@@ -3,6 +3,14 @@
   hosts: hw1
 
   tasks:
+  - name: Ensure python2 is at the latest version
+    ansible.builtin.yum:
+      name: python
+      state: latest
+  - name: Ensure python3 is at the latest version
+    ansible.builtin.yum:
+      name: python3
+      state: latest
   - name: Ensure nodeJS is at the latest version
     ansible.builtin.yum:
       name: nodejs
