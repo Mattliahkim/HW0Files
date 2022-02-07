@@ -7,12 +7,12 @@
     ansible.builtin.yum:
       name: nodejs
       state: latest
-      use_backend: yum3
+      use_backend: yum
   - name: Ensure express is at the latest version
     ansible.builtin.yum:
       name: node-express-generator
       state: latest
-      use_backend: yum3
+      use_backend: yum
   - name: Checkout git repository
     ansible.builtin.git:
       repo: 'https://github.com/Mattliahkim/HW0Files.git'
