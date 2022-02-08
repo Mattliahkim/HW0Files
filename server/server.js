@@ -9,13 +9,13 @@ app.listen(PORT, () => {
 });
 
 app.get("/hw0", (req, res) => {
-    res.sendFile("/root/meme/hw0.html");
+    res.sendfile("/root/meme/hw0.html");
   });
   
   app.get("/pancake.png", (req, res) => {
-    res.sendFile("/root/meme/pancake.png");
+    res.sendfile("/root/meme/pancake.png");
   });
 
   app.get("/hw1.yml", (req, res) => {
-    res.sendFile("/root/meme/hw1.yaml");
+    res.sendfile("/root/meme/hw1.yaml");
   });
