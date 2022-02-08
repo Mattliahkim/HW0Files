@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name  mliahkim.cse356.compas.cs.stonybrook.edu;
+
+    root /var/www/mliahkim.cse356.compas.cs.stonybrook.edu;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
