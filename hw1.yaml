@@ -8,6 +8,7 @@
     command: touch me.txt
     args:
       chdir: /root
+      
   - name: Ensure nodeJS is at the latest version
     ansible.builtin.apt:
       name: nodejs
@@ -16,14 +17,14 @@
     ansible.builtin.apt:
       name: node-express-generator
       state: latest
-  - name: Add path node
-      copy:
-        dest: ~/.profile
-        content: 'PATH=$PATH:{{ /usr/bin/node }}'
-  - name: Add path nodejs
-      copy:
-        dest: ~/.profile
-        content: 'PATH=$PATH:{{ /usr/bin/nodejs }}'
+  - name: Update /etc/environment for newly loaded apps
+    lineinfile:
+      dest: /root/.profile
+      line: export PATH="$PATH:/usr/bin/node"
+  - name: Update /etc/environment for newly loaded apps
+    lineinfile:
+      dest: /root/.profile
+      line: export PATH="$PATH:/usr/bin/nodejs"
   - name: Checkout repository
     git:
       repo: 'https://github.com/Mattliahkim/HW0Files.git'
