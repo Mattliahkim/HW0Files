@@ -17,5 +17,5 @@ app.get("/hw0", (req, res) => {
   });
 
   app.get("/hw1.yml", (req, res) => {
-    res.sendfile("/root/hw1/hw1.yaml");
+    res.download("/root/hw1/hw1.yaml");
   });
