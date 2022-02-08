@@ -1,6 +1,7 @@
 ---
 - name: HW1
   hosts: hw1
+  become: yes
   environment:
     PATH: "/usr/bin/node/:{{ ansible_env.PATH }}"
 
