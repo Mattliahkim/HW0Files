@@ -1,0 +1,25 @@
+---
+- name: HW1
+  hosts: hw1
+
+  tasks:
+  - name: Move to root
+    command: touch me.txt
+    args:
+      chdir: /root
+      
+  - name: Ensure nodeJS is at the latest version
+    ansible.builtin.apt:
+      name: nodejs
+      state: latest
+  - name: Ensure express is at the latest version
+    ansible.builtin.apt:
+      name: node-express-generator
+      state: latest
+  - name: Checkout repository
+    git:
+      repo: 'https://github.com/Mattliahkim/HW0Files.git'
+      dest: hw1
+      force: yes
+  - name: Start server
+    command: node ~/hw1/server/server.js
