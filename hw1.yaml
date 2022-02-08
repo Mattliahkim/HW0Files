@@ -2,9 +2,6 @@
 - name: HW1
   hosts: hw1
   become: yes
-  environment:
-    PATH: "/usr/bin/nodejs/:{{ ansible_env.PATH }}"
-    #PATH: "/usr/bin/node/:{{ ansible_env.PATH }}"
 
   tasks:
   - name: Move to root
