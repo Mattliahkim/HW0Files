@@ -13,9 +13,9 @@ app.get("/hw0", (req, res) => {
   });
   
   app.get("/pancake.png", (req, res) => {
-    res.sendfile("/root/meme/pancake.png");
+    res.sendfile("/root/hw1/pancake.png");
   });
 
   app.get("/hw1.yml", (req, res) => {
-    res.sendfile("/root/meme/hw1.yaml");
+    res.sendfile("/root/hw1/hw1.yaml");
   });
